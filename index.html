@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crosscurrent Ventures</title>
+  <meta name="description" content="Stewarding emerging projects." />
+  <meta property="og:title" content="Crosscurrent Ventures" />
+  <meta property="og:description" content="Stewarding emerging projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="robots" content="all" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='70' x='12' font-size='80'%3E%F0%9F%8C%8A%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --fg: #e8eaed;
+      --muted: #a7adb3;
+      --card: #111317;
+      --accent: #2f9e80; /* greener-toned blue */
+      --ring: #2f9e8033;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --fg: #111317;
+        --muted: #5b6570;
+        --card: #f6f7f9;
+        --accent: #2f9e80;
+        --ring: #2f9e8022;
+      }
+    }
+    html, body {
+      height: 100%;
+      background: radial-gradient(1000px 600px at 50% -200px, var(--card), var(--bg));
+      color: var(--fg);
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 15vh; /* bump up higher */
+      padding-left: 1rem;
+      padding-right: 1rem;
+      transition: padding-top 0.4s ease;
+    }
+    .card {
+      width: 100%;
+      max-width: 860px;
+      background: linear-gradient(180deg, var(--card), color-mix(in srgb, var(--card) 85%, var(--bg)));
+      border: 1px solid color-mix(in srgb, var(--fg) 10%, transparent);
+      border-radius: 24px;
+      padding: 2rem clamp(1rem, 3vw, 3rem);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      transition: all 0.4s ease;
+      position: relative;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .logo svg {
+      width: 70%;
+      height: 70%;
+    }
+    h1 {
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      line-height: 1.2;
+      margin: 0;
+      letter-spacing: 0.2px;
+    }
+    .tag {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin: 0.25rem 0 0.5rem;
+    }
+    footer {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: .9rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    /* Mobile treatment: fullscreen light grey background */
+    @media (max-width: 640px) {
+      body {
+        background: var(--card);
+        transition: background 0.4s ease;
+      }
+      .wrap {
+        justify-content: flex-start;
+        padding-top: 10vh; /* position higher on mobile */
+      }
+      .card {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        max-width: none;
+        padding: 2rem 1.5rem;
+        min-height: 100vh;
+      }
+      footer {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        padding-bottom: 1rem;
+        justify-content: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" role="main">
+      <header>
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crosscurrent logo">
+            <!-- Outer ring -->
+            <circle cx="50" cy="50" r="44" fill="none" stroke="#d9f2ec" stroke-width="6" opacity="0.9"/>
+            <!-- Water waves -->
+            <path d="M10 55 Q20 65, 30 55 T50 55 T70 55 T90 55" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+            <path d="M10 70 Q20 80, 30 70 T50 70 T70 70 T90 70" fill="none" stroke="#d9f2ec" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Crosscurrent Ventures</h1>
+          <p class="tag">Stewarding emerging projects.</p>
+        </div>
+      </header>
+
+      <footer>
+        <span>© 2025 Crosscurrent Ventures</span>
+        <span>v0.1</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
